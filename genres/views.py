@@ -1,8 +1,13 @@
-from django.http import JsonResponse
+from rest_framework import generics
 from genres.models import Genre
+from genres.serializers import GenreSerializer
 
 
-def genre_view(request):
-    genres = Genre.objects.all()
-    data = [{'id': genre.id, 'name': genre.name} for genre in genres]
-    return JsonResponse(data, safe=False)
+class GenreCreateListView(generics.ListCreateAPIView):
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
+
+
+class GenreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
