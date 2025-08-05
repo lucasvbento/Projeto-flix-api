@@ -3,8 +3,18 @@ from django.db import models
 
 NATIONALITY_CHOICES = (
     ('USA', 'Estados Unidos'),
-    ('BRAZIL', 'Brasil'),
+    ('Brazil', 'Brasil'),
+    ('UK', 'Reino Unido'),
+    ('ISRAEL', 'Israel'),
+    ('AUSTRALIA', 'Austrália'),
+    ('SOUTH_AFRICA', 'África do Sul'),
+    ('CANADA', 'Canadá'),
+    ('IRELAND', 'Irlanda'),
+    ('MEXICO', 'México'),
+    ('SPAIN', 'Espanha'),
+    ('KENYA', 'Quênia'),
 )
+
 
 
 class Actor(models.Model):
