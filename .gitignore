@@ -34,3 +34,5 @@ Thumbs.db
 
 # My stuff
 my_custom_ignored_file.txt
+
+*.sqlite3
